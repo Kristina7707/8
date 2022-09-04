@@ -12,11 +12,12 @@
 int[,] GetMatrix(int row, int col, int min, int max)
 {
     int[,] matrix = new int[row, col];
+     Random rnd = new Random();
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(min, max);
+            matrix[i, j] = rnd.Next(min, max);
         }
     }
     return matrix;
