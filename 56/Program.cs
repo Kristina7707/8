@@ -8,10 +8,10 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 
-int[,] GetMatrix(int row, int col, int min, int max)
+int[,] CreateMatrix(int row, int col, int min, int max)
 {
     int[,] array = new int[row, col];
-     Random rnd = new Random();
+    Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -50,19 +50,19 @@ void PrintMatrix(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + "  ");
+            System.Console.Write($"{array[i, j]} ");
         }
-        Console.WriteLine();
+        System.Console.WriteLine();
     }
 }
 
-int row = 4;
-int col = 3;
+int row = 5;
+int col = 8;
 int min = 1;
 int max = 10;
 
-int[,] matrix = GetMatrix(row, col, min, max);
+int[,] matrix = CreateMatrix(row, col, min, max);
 PrintMatrix(matrix);
-Console.Write("Строка №");
+Console.Write("Строка с наименьшей суммой элементов = ");
 int index = rowNumber(matrix);
 Console.WriteLine(index);
