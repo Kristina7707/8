@@ -49,9 +49,9 @@ void PrintTable(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            System.Console.Write(matrix[i, j] + "  ");
+            Console.Write( $" { matrix[i, j] }  ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
@@ -63,6 +63,6 @@ int max = 10;
 int[,] table = GetMatrix(row, col, min, max);
 PrintTable(table);
 
-System.Console.WriteLine();
+Console.WriteLine();
 int[,] rowSort = SortRow(table);
 PrintTable(rowSort);
